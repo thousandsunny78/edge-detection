@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/picture_cropped"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <!-- <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"> -->
+
+    <ImageView
+        android:id="@+id/paper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <com.sample.edgedetection.view.PaperRectangle
+        android:id="@+id/paper_rect"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparent" />
+
+    <!-- </RelativeLayout> -->
+
+    <!--<TextView
+        android:id="@+id/crop"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
+        android:background="?android:selectableItemBackground"
+        android:gravity="end"
+        android:visibility="gone"
+        android:text="@string/crop" />
+
+    <TextView
+        android:id="@+id/enhance"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_alignParentEnd="true"
+        android:background="?android:selectableItemBackground"
+        android:gravity="end"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:text="@string/enhance" />
+
+    <ImageButton
+        android:id="@+id/proceed"
+        android:background="@drawable/round_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:tint="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_done_black_24dp" />-->
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/crop"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/round_button"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_crop"
+            app:tint="@android:color/white" />
+
+    </RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/crop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorBlack"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="10dp">
+
+        <!--<Text
+            android:id="@+id/cancel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="false"
+            android:layout_centerVertical="true"
+            android:background="@drawable/round_button"
+            android:padding="12dp"
+            app:srcCompat="@drawable/ic_baseline_flash_on_24"
+            app:tint="@android:color/white" />-->
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_signup_back"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/back"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/back" />
+
+        <TextView
+            android:id="@+id/edit_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/edit_scan" />
+
+        <TextView
+            android:id="@+id/crop"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/next" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/crop_done_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorBlack"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/edit_scan_back"
+            android:layout_width="20dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_signup_back"
+            app:tint="@android:color/white" />
+
+        <TextView
+            android:id="@+id/edit_scan_back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@+id/edit_scan_back"
+            android:layout_centerVertical="true"
+            android:textSize="16sp"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/edit_scan" />
+
+        <TextView
+            android:id="@+id/review"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/review" />
+
+        <TextView
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/done" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="@color/colorBlack"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone">
+
+        <!-- <ImageView
+             android:id="@+id/gallery"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_alignParentEnd="true"
+             android:layout_centerVertical="true"
+             android:padding="12dp"
+             app:srcCompat="@drawable/ic_menu_gallery"
+             app:tint="@android:color/white" />-->
+
+        <TextView
+            android:id="@+id/effect"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:background="?android:selectableItemBackground"
+            android:text="@string/gray" />
+
+        <ImageView
+            android:id="@+id/rotation"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/ic_rotate"
+            app:tint="@android:color/white" />
+
+        <!--<ImageView
+             android:id="@+id/gallery"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:layout_alignParentEnd="true"
+             android:layout_centerVertical="true"
+             android:padding="12dp"
+             app:srcCompat="@drawable/ic_menu_gallery"
+             app:tint="@android:color/white" />-->
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
